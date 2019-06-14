@@ -180,7 +180,11 @@ The zoos are concerned about animals with a lower population count. Find out whi
 
 */
 const lowerPopulation = [];
-lower
+zooAnimals.filter((zooAnimals) => {
+  if (zooAnimals.population < 5){
+    lowerPopulation.push(zooAnimals.animal_name + ": " + zooAnimals.population);
+  };
+});
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 

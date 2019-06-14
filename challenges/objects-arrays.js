@@ -120,9 +120,14 @@ const uni = [];
 for (i = 0; i < graduates.length; ++i){
   if (graduates[i].university.includes("Uni")){
     uni.push(graduates[i].university);
-  }
-}
-console.log(uni);
+  };
+};
+
+// would be easier to use .forEach in this instance, but syntax is not registering for:
+// graduates.forEach(graduates[i].university.includes("Uni") => {
+//   uni.push(graduates[i].university);
+// });
+// console.log(uni);
 
 // ==== ADVANCED Array Methods ====
 
@@ -154,7 +159,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 const animalNames = [];
 zooAnimals.forEach((zooAnimals) => {
   animalNames.push("Name: " + zooAnimals.animal_name + ", Scientific: " + zooAnimals.scientific_name + ".");
-})
+});
 console.log(animalNames);
 
 /* Request 2: .map()    
@@ -175,6 +180,7 @@ The zoos are concerned about animals with a lower population count. Find out whi
 
 */
 const lowerPopulation = [];
+lower
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 

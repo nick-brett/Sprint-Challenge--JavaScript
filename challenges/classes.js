@@ -21,13 +21,8 @@ class CuboidMaker {
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
 
-class cuboidStep4 extends CuboidMaker{
-    constructor(props) {
-        super(props);
-    };
-};
-// var cuboidStep4 = new CuboidMaker({ length: 4, width: 5, height: 5 });
-// console.log(cuboidStep4);
+var cuboidStep4 = new CuboidMaker({ length: 4, width: 5, height: 5 });
+console.log(cuboidStep4);
 
 /* == Step 2: Volume Method ==
   Create a method using CuboidMaker's prototype that returns the volume of a given cuboid's length,

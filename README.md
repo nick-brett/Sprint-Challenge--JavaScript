@@ -44,7 +44,7 @@ Closure is when a function is given access to an outer scope from an inner funct
 4: Explicit- Whenever the call method is used, 'this' is explicitly defined
 
 5. Why do we need super() in an extended class?
-We use super to invoke a method from the parent class.
+We use super to invoke a constructer function of the parent class.
 
 ## Project Set up
 

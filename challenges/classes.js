@@ -21,11 +21,11 @@ class CuboidMaker {
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
 
-// class cuboidStep4 extends CuboidMaker{
-//     constructor(props) {
-//         super(props);
-//     };
-// };
+class cuboidStep4 extends CuboidMaker{
+    constructor(props) {
+        super(props);
+    };
+};
 // var cuboidStep4 = new CuboidMaker({ length: 4, width: 5, height: 5 });
 // console.log(cuboidStep4);
 

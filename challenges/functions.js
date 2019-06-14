@@ -25,9 +25,9 @@ let multiply = (a, b) => {return a * b};
 // };
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2,2,add)); // 4
-// console.log(consume(10,16,multiply)); // 160
-// console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2,2,add)); // 4
+console.log(consume(10,16,multiply)); // 160
+console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -35,7 +35,7 @@ let multiply = (a, b) => {return a * b};
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation: 
-//the nestedFunction() can access `internal` because it is within its scope.
+//The nestedFunction() can access `internal` because both are found in the same scope of myFunction().
 
 
 const external = "I'm outside the function";

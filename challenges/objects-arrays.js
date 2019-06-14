@@ -96,8 +96,8 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-graduates.forEach((graduates) => {
-  universities.push(graduates.university);
+graduates.forEach((element) => {
+  universities.push(element.university);
 });
 universities.sort();
 console.log(universities);
@@ -168,9 +168,8 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
-zooAnimals.map((element) => {
-  lowerCase.push(element.animal_name.toLowerCase());
+const lowerCase =  zooAnimals.map((element) => {
+  return element.animal_name.toLowerCase();
 });
 console.log(lowerCase);
 

@@ -109,10 +109,19 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+graduates.forEach((graduates) => {
+  contactInfo.push(graduates.first_name + " " + graduates.email);
+});
+contactInfo.sort();
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+for (i = 0; i < graduates.length; ++i){
+  if (graduates[i].university.includes("Uni")){
+    uni.push(graduates[i].university);
+  }
+}
 console.log(uni);
 
 // ==== ADVANCED Array Methods ====

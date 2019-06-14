@@ -116,18 +116,18 @@ contactInfo.sort();
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
-for (i = 0; i < graduates.length; ++i){
-  if (graduates[i].university.includes("Uni")){
-    uni.push(graduates[i].university);
-  };
-};
+// const uni = [];
+// for (i = 0; i < graduates.length; ++i){
+//   if (graduates[i].university.includes("Uni")){
+//     uni.push(graduates[i].university);
+//   };
+// };
 
 // would be easier to use .forEach in this instance, but syntax is not registering for:
-// graduates.forEach(graduates[i].university.includes("Uni") => {
-//   uni.push(graduates[i].university);
-// });
-// console.log(uni);
+const uni = graduates.filter(element => {
+	element.university.includes("Uni")
+});
+console.log(uni);
 
 // ==== ADVANCED Array Methods ====
 
@@ -158,7 +158,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 const animalNames = [];
 zooAnimals.forEach((zooAnimals) => {
-  animalNames.push("Name: " + zooAnimals.animal_name + ", Scientific: " + zooAnimals.scientific_name + ".");
+  animalNames.push(`Name: ${zooAnimals.animal_name}, Scientific: ${zooAnimals.scientific_name}`);
 });
 console.log(animalNames);
 
@@ -169,8 +169,8 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
-zooAnimals.map((zooAnimals) => {
-  lowerCase.push(zooAnimals.animal_name.toLowerCase());
+zooAnimals.map((element) => {
+  lowerCase.push(element.animal_name.toLowerCase());
 });
 console.log(lowerCase);
 
@@ -179,12 +179,9 @@ console.log(lowerCase);
 The zoos are concerned about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
-const lowerPopulation = [];
-zooAnimals.filter((zooAnimals) => {
-  if (zooAnimals.population < 5){
-    lowerPopulation.push(zooAnimals.animal_name + " : " + zooAnimals.population);
-  };
-});
+const lowerPopulation = zooAnimals.filter((element) => {
+	return (element.population < 5)
+}); 
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
